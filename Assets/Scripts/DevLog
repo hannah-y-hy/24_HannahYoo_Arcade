@@ -1,5 +1,6 @@
 24_HannahYoo_Arcade
-Github link for this project:
+Github link for this project: https://github.com/hannah-y-hy/24_HannahYoo_Arcade/tree/main
+1-sentence description for this game: Eliminating all the stars(including randomly respawning ones) in 3 min, at the Supermario-like gamefield 
 
 <Task list>
 **minimal core things first**
@@ -10,7 +11,7 @@ Task 1. Basic Game field settings
                 e.g: player's default(idle) animattion: hovering 
         Step b. Make some pixel art icons if there's nothing suitable
     Step 2. basic settings for sprites
-        Step a. adding components like RigidBody, polygon collider, etc
+        Step a. adding components like RigidBody 2D, Box collider 2D, etc
 
 
 Task 2. Making 3-min timer
@@ -20,11 +21,11 @@ Task 2. Making 3-min timer
 
 
 Task 3. Movements for gameobjects
-    Step 1. Setting up player's movement according to joystick
-        step a. Input.GexAxis() code that reacts to joystick's 8-way movement
-    Step 2. Setting up player's movement according to red & green button
-        step a. Red button down == Squashed scale
-        step b. Green button down == player jump
+    Step 1. Setting up player's movement according to joystick(or just keyboard keys for now)
+        step a. Input.GexAxis() code that reacts to keyboard's left and right arrow keys
+    Step 2. Setting up player's movement according to right & left button
+        step a. left button down == player jump
+        step b. Green button down == player jump a bit higher
 
 
 <DevLog>
@@ -49,7 +50,7 @@ Current task: Recap on 10/24's class & a bit more researches
 
 
 10/29
-*Personally, just drawing a flowchart didn't work out well, so I decided to make a tile map a little bit for a better ideation on user experience ideas.
+* Personally, just drawing a flowchart didn't work out well, so I decided to make a tile map a little bit for a better ideation on user experience ideas.
 Current task: Gathering some gmae objest assets
             & Setting up tile map palette
     Unity Doc about the tile map thing (Kor): https://docs.unity3d.com/kr/2021.3/Manual/class-Tilemap.html
@@ -75,9 +76,20 @@ Partner from now on: Phoebe
         -> and then jumping
     #2: Suber basic gamefield settings
         -> prefab-based gamefield (NOT TILEMAP)
-        --> just going over Unity Docs about prefabs right now: https://docs.unity3d.com/Manual/CreatingPrefabs.html
+        --> right now: going over Unity Docs about prefabs right now: https://docs.unity3d.com/Manual/CreatingPrefabs.html
 
-Current task (Before Lunch): Making basic player movements in Player.cs 
-    Just learned that we could use z axis to flip player gameobject
-
-Current task (After Lunch): Setting up timer on the upper right side of the screen
+- Current task (Before Lunch): Making basic player movements in Player.cs 
+- Current task (After Lunch): Setting up basic gamefield
+    <Some notes about current GameManager script>
+    (The script that is related to star gameobjects):
+         - Making the stars resapwning till the player collides(eliminates) certain number of stars
+            --> **So this game would be like eliminating all the stars(including respawning ones) in 3 min**
+         - "StarsCollected < 5" : if player collects(=collides and eliminates) 5 stars, the stars won't be respawned anymore
+            --> but we might wanna heighten this value later — we'll see
+         - "NewPos" : new position that new star
+         - Star respawning rate: initially, it was set to 1 sec but we could set that time to random second or something
+         - How to assign controller keys for player(ghost)'s movement: If we go to the inspector panel of player(ghost) gameobject, there would be super long list of available keys under the 'Player script' component
+<Next task we might wanna do>
+1. setting up 3-min timer thing on the upper-right side of the screen
+2. making game over logic that works when 
+3. writing script for borders: I(Hannah) just made some transparent rectangle gameobjects that could work as border lines to prevent the player flying out of the screen, but I just had no time to write script for them
