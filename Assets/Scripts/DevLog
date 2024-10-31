@@ -76,3 +76,8 @@ Partner from now on: Phoebe
     #2: Suber basic gamefield settings
         -> prefab-based gamefield (NOT TILEMAP)
         --> just going over Unity Docs about prefabs right now: https://docs.unity3d.com/Manual/CreatingPrefabs.html
+
+Current task (Before Lunch): Making basic player movements in Player.cs 
+    Just learned that we could use z axis to flip player gameobject
+
+Current task (After Lunch): Setting up timer on the upper right side of the screen
