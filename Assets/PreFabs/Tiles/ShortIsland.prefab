@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4883659144829394065
+--- !u!1 &891366884033489394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5849918221129726493}
-  - component: {fileID: 5566824336904702032}
+  - component: {fileID: 6439872839463322271}
+  - component: {fileID: 4065293451842400093}
   m_Layer: 0
-  m_Name: tile_0024
+  m_Name: tile_0072
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5849918221129726493
+--- !u!4 &6439872839463322271
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883659144829394065}
+  m_GameObject: {fileID: 891366884033489394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0.011989826}
+  m_LocalPosition: {x: 3, y: 0, z: 0.022320673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7678943643058937773}
+  m_Father: {fileID: 8579128913992777328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5566824336904702032
+--- !u!212 &4065293451842400093
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883659144829394065}
+  m_GameObject: {fileID: 891366884033489394}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a34c80de9f594576a2f50ecf4083084, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b7f9774c99074b11902afd7f39b6c5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7273952231061860421
+--- !u!1 &2992103914404042813
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,37 +92,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4601948874133188799}
-  - component: {fileID: 1953218942546684281}
+  - component: {fileID: 3101051943175309108}
+  - component: {fileID: 8635017959289670626}
   m_Layer: 0
-  m_Name: tile_0008
+  m_Name: tile_0074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4601948874133188799
+--- !u!4 &3101051943175309108
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7273952231061860421}
+  m_GameObject: {fileID: 2992103914404042813}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: 0.011989826}
+  m_LocalPosition: {x: 4, y: 0, z: 0.022320673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7678943643058937773}
+  m_Father: {fileID: 8579128913992777328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1953218942546684281
+--- !u!212 &8635017959289670626
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7273952231061860421}
+  m_GameObject: {fileID: 2992103914404042813}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b425037de22a4cd9abad4dd58f529c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 621f14200f32c4199beef1bb28baf1b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8533644124234066032
+--- !u!1 &5645642759604450424
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,28 +176,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7678943643058937773}
+  - component: {fileID: 8579128913992777328}
   m_Layer: 0
-  m_Name: Obstacle_ShortCandy
+  m_Name: ShortIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7678943643058937773
+--- !u!4 &8579128913992777328
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533644124234066032}
+  m_GameObject: {fileID: 5645642759604450424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4271892, y: 0.011809271, z: -0.011989826}
+  m_LocalPosition: {x: -0.7399617, y: 0.48644507, z: -0.022320673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4601948874133188799}
-  - {fileID: 5849918221129726493}
+  - {fileID: 6439872839463322271}
+  - {fileID: 3101051943175309108}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
