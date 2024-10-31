@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
             theRB.velocity = new Vector2(0, theRB.velocity.y);
         }
 
-        if (Input.GetKeyDown(jump) && isGrounded==true)
+        if (Input.GetKeyDown(jump) && isGrounded)
         {
             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
         }
