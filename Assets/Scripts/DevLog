@@ -2,6 +2,8 @@
 Github link for this project:
 
 <Task list>
+**minimal core things first**
+
 Task 1. Basic Game field settings
     Step 1. Sprite sheets animations for idle state
         Step a. Search for appropriate game object assets
