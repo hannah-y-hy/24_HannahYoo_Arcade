@@ -1,0 +1,65 @@
+24_HannahYoo_Arcade
+Github link for this project:
+
+<Task list>
+Task 1. Basic Game field settings
+    Step 1. Sprite sheets animations for idle state
+        Step a. Search for appropriate game object assets
+                e.g: player's default(idle) animattion: hovering 
+        Step b. Make some pixel art icons if there's nothing suitable
+    Step 2. basic settings for sprites
+        Step a. adding components like RigidBody, polygon collider, etc
+
+
+Task 2. Making 3-min timer
+    Step 1. UI elementsfor timer
+        Step a. make TextMeshPro thing for timer
+    Step 2. timer operation logic in GameManager script
+
+
+Task 3. Movements for gameobjects
+    Step 1. Setting up player's movement according to joystick
+        step a. Input.GexAxis() code that reacts to joystick's 8-way movement
+    Step 2. Setting up player's movement according to red & green button
+        step a. Red button down == Squashed scale
+        step b. Green button down == player jump
+
+
+<DevLog>
+
+10/26
+Current task: making researches on what I need to learn
+    Googling to figure out whether it's possible to make timer gameobjets to deide active/inactive state of the game
+        ->I guess this kind of logic is available in game manager script
+        referred developer blogs (Kor): 1) https://velog.io/@slow_cosmos/Unity-%ED%83%80%EC%9D%B4%EB%A8%B8-%EA%B5%AC%ED%98%84
+                                        2)(super basic recap of DeltaTime):https://www.engedi.kr/unity/?bmode=view&idx=3709777
+
+    Figuring out whether there's any efficient way to make tile/block based 2D gmae
+        ->Tile palette: somthing that helps tile based gmae field design
+            --> I might wanna search for some video tutorials about this
+                                
+
+10/27
+Current task: Recap on 10/24's class & a bit more researches
+    Started drawing UX flowchart in Freeform but has only a couple of screen images( default & game start)
+    Going over canvas announcement on 10/24's class : https://mica.instructure.com/courses/17324/assignments/121419
+    Making some notes on FreeForm about methods that I might wanna use in this projects
+
+
+10/29
+*Personally, just drawing a flowchart didn't work out well, so I decided to make a tile map a little bit for a better ideation on user experience ideas.
+Current task: Gathering some gmae objest assets
+            & Setting up tile map palette
+    Unity Doc about the tile map thing (Kor): https://docs.unity3d.com/kr/2021.3/Manual/class-Tilemap.html
+    + Developer's blog that I referred (Kor): https://velog.io/@ohjh1744/%EC%9C%A0%EB%8B%88%ED%8B%B02D-%ED%83%80%EC%9D%BC%ED%8C%94%EB%A0%88%ED%8A%B8-%ED%83%80%EC%9D%BC%EB%A7%B5-%EB%AC%BC%EB%A6%AC%EC%A0%81%EC%9A%A9-%EB%B3%B5%ED%95%A9-%EC%BD%9C%EB%9D%BC%EC%9D%B4%EB%8D%94-2D
+        just learned that there is some special kind of tile map that called 'Rule tile'
+        -> Unity Doc (Kor): https://unity.com/kr/how-to/create-art-and-gameplay-2d-tilemaps-unity
+        * But TBH setting up rules in that component seems to be too complicated so I'm not really sure whether I'm gonna use that 
+
+
+10/30 and a bit more before 10/31's class
+Current task: kind of playing with Gameobjects & tile map for specified UX plans
+    * Just made some simple player & coin objects for this
+    Opened FreeForm drawing tool and planning & drawing player's movements accoring to the joystick's movement
+    Thinking about what I could do with red & Green buttons on the arcade machine: maybe jump and appearance change of player gameobject?
+    Still drawing & googling some methods to make certain UX available
