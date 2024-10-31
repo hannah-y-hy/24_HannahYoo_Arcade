@@ -65,3 +65,14 @@ Current task: kind of playing with Gameobjects & tile map for specified UX plans
     Opened FreeForm drawing tool and planning & drawing player's movements accoring to the joystick's movement
     Thinking about what I could do with red & Green buttons on the arcade machine: maybe jump and appearance change of player gameobject?
     Still drawing & googling some methods to make certain UX available
+
+
+10/31 In-class work session
+Partner from now on: Phoebe
+<Setting priority tasks after talking with Doc Stegman >
+    #1: Making core things
+        -> maybe just walking by using left&right arrow keys for now
+        -> and then jumping
+    #2: Suber basic gamefield settings
+        -> prefab-based gamefield (NOT TILEMAP)
+        --> just going over Unity Docs about prefabs right now: https://docs.unity3d.com/Manual/CreatingPrefabs.html
