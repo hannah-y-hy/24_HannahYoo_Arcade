@@ -7,6 +7,8 @@ public class PlayerTouchStars2D : MonoBehaviour
     public GameObject[] stars; // Array of star GameObjects
     public float spawnRange = 5f; // Range for new positions
     private int starsCollected = 0; // Count of stars collected
+    public float minReappearTime = 1f; // Minimum time to reappear
+    public float maxReappearTime = 3f; // Maximum time to reappear
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,15 +26,16 @@ public class PlayerTouchStars2D : MonoBehaviour
 
                 star.transform.position = newPos;
 
-                // Make it reappear after a short delay
-                StartCoroutine(Reappear(star));
+                // Make it reappear after a random delay
+                float randomDelay = Random.Range(minReappearTime, maxReappearTime);
+                StartCoroutine(Reappear(star, randomDelay));
             }
         }
     }
 
-    System.Collections.IEnumerator Reappear(GameObject star)
+    System.Collections.IEnumerator Reappear(GameObject star, float delay)
     {
-        yield return new WaitForSeconds(1f); // Wait time before reappearing
+        yield return new WaitForSeconds(delay); // Wait for random time
         star.SetActive(true);
     }
 }
