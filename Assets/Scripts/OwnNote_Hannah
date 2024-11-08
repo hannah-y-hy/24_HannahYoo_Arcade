@@ -3,4 +3,38 @@
 10/31, In-class work session
     Just learned that we could use z axis to flip player gameobject
 
-11/02
+11/07, Some notes about ray casting
+    reason why we set z value to 0 in 2D games: we want things to collide. if certain GOs have diffrent z values, thry aren't gonna collide.
+- super basic components when we wanna make some movements(physics?): sprite renderer, collider 2D, rb2D
+    * FYI thing- Primative colliders: made of vertex
+        vertex: tiny little dots around the collider
+- super basic components when we wanna make some collision on certain GO: collider 2D, rb2D
+- Difference beween 3 linear stuff in Unity
+1. Vector: has value
+2. Ray: infinite to 1 side (but we cna give it a ending point)
+3. Line: infinite to both sides
+- Explosion(): a method that is realted to Ray casting
+    how do we use this method in ray casting?: by conditional statement(If/else...)
+        e.g.: Update()
+                {
+                if(true)
+                {
+                    Explosion()
+                }
+                }
+
+- Ray casting: same as cllider but we decide the colliding point(?)
+    e.g.: we can make some colliders on the screen and tell the ray to do run Explosion() when the ray hits certain collider
+        ==something like a radar - IFKYK
+- Using bool in ray casting example:
+    Raycas+2D()
+    {
+        bool hit;
+        return hit;
+    }
+- Parameters that RayCas method need: 1)Starting point, 2)Direction (and also we can do leangth if we want. if we don't set that, it's gonna be infinite. leangth is like setting a ending point)
+    1) Starting point: vector 2(x and y party). we're settiong a position, like setting a point
+    2) Direction 
+- Ray casting: has 11 differnt versions so we might wanna use one of them
+- what we could do in conditional statement of ray casting: 
+- 'CheckCircle' method: this is a method that checks everything in circular direction 
