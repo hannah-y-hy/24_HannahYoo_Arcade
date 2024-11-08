@@ -13,12 +13,6 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D theRB;
 
-    public Transform groundCheckPoint;
-    public float groundCheckRadiue;
-    public LayerMask whatIsGround;
-
-    public bool isGrounded;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +21,7 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadiue, whatIsGround);
+    { 
 
         if (Input.GetKey(left))
         {
@@ -43,7 +36,7 @@ public class Player : MonoBehaviour
             theRB.velocity = new Vector2(0, theRB.velocity.y);
         }
 
-        if (Input.GetKeyDown(jump) && isGrounded)
+        if (Input.GetKeyDown(jump))
         {
             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
         }
