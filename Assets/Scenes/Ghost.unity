@@ -2115,7 +2115,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1185363610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,8 +3208,21 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.34
       objectReference: {fileID: 0}
+    - target: {fileID: 7614142790725020712, guid: 92f145f47ef1d461fa3abe26ef0c1492, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614142790725020712, guid: 92f145f47ef1d461fa3abe26ef0c1492, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614142790725020712, guid: 92f145f47ef1d461fa3abe26ef0c1492, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 8532386999784607518, guid: 92f145f47ef1d461fa3abe26ef0c1492, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3825,6 +3838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1121570594}
     m_Modifications:
+    - target: {fileID: -2173446505273751202, guid: 6aa0a249e18c54295b32dc7b47d21cf8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5801318309172068607, guid: 6aa0a249e18c54295b32dc7b47d21cf8, type: 3}
       propertyPath: m_Name
       value: SilverStar
@@ -3871,6 +3888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 7587938883589886676, guid: 6aa0a249e18c54295b32dc7b47d21cf8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4066,8 +4084,13 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 5636890376416321805, guid: 4c61a65a65357475c8c6afcca602b4d2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 1735814314193159336, guid: 4c61a65a65357475c8c6afcca602b4d2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
