@@ -38,3 +38,15 @@
 - Ray casting: has 11 differnt versions so we might wanna use one of them
 - what we could do in conditional statement of ray casting: 
 - 'CheckCircle' method: this is a method that checks everything in circular direction 
+
+
+11/14: How to modify input manager for an archade machine
+- Some components that I might wanna set in input manager panel
+Type: "Joystick axis". this is originally set as keyboard something
+Joy Num:Joystick 1 or 2 or something. The first joystick that you connect to the computer first would be joystick 1.
+
+    *If I have 2 players, I should make seperate "Horizontal" & " Vertical" for each players.
+    e.g.: Horizontal player 1 + Vertical player 1 & Horizontal player 2 + Vertical player 2
+
+Positive Button: I should fill this thing since it's a must-do thing
+                e.g.: joystick 1 button 0, or joystick 1 button 0, or something like that. 

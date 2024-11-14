@@ -15,17 +15,15 @@ public class Player : MonoBehaviour
 
     public StarSpawner starSpawner; // StarSpawner 스크립트 참조 / Reference to StarSpawner script
 
-    // Start is called before the first frame update
     void Start()
     {
         // Rigidbody2D 컴포넌트 가져오기 / Get Rigidbody2D component
         theRB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 플레이어의 이동 처리 / Handle player movement
+        // 키보드 입력에 의한 이동 처리 / Handle movement with keyboard input
         if (Input.GetKey(left))
         {
             theRB.velocity = new Vector2(-moveSpeed, theRB.velocity.y); // 왼쪽 이동 / Move left
@@ -39,8 +37,21 @@ public class Player : MonoBehaviour
             theRB.velocity = new Vector2(0, theRB.velocity.y); // 이동이 없으면 속도 0 / Stop when no input
         }
 
-        // 점프 처리 / Handle jump
+        // 조이스틱 X축 이동 처리 / Handle joystick movement
+        float moveInput = Input.GetAxis("joystick_1_X");
+        if (Mathf.Abs(moveInput) > 0.1f) // 조이스틱 민감도를 고려하여 이동 처리 / Handle movement considering joystick sensitivity
+        {
+            theRB.velocity = new Vector2(moveInput * moveSpeed, theRB.velocity.y);
+        }
+
+        // 점프 처리 (키보드 입력) / Handle jump with keyboard input
         if (Input.GetKeyDown(jump) && Mathf.Abs(theRB.velocity.y) < 0.01f)
+        {
+            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce); // 점프 / Jump
+        }
+
+        // 조이스틱 점프 버튼 입력 처리 / Handle jump button press on joystick
+        if (Input.GetButtonDown("joystick_button") && Mathf.Abs(theRB.velocity.y) < 0.01f)
         {
             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce); // 점프 / Jump
         }

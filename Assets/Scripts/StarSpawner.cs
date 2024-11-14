@@ -3,7 +3,7 @@ using UnityEngine;
 public class StarSpawner : MonoBehaviour
 {
     public GameObject[] starPrefabs; // 별 프리팹 배열 / Array of star prefabs
-    public EdgeCollider2D respawnArea; // 리스폰 영역 (Edge Collider 2D 사용) / Respawn area using Edge Collider 2D
+    public PolygonCollider2D respawnArea; // 리스폰 영역 (Edge Collider 2D 사용) / Respawn area using Edge Collider 2D
     public float minReappearTime = 1f; // 최소 리스폰 시간 (인스펙터에서 설정 가능) / Minimum respawn time (adjustable in inspector)
     public float maxReappearTime = 3f; // 최대 리스폰 시간 (인스펙터에서 설정 가능) / Maximum respawn time (adjustable in inspector)
     public int starsToCollect = 5; // 수집해야 하는 별의 개수 (인스펙터에서 설정 가능) / Number of stars to collect (adjustable in inspector)
@@ -25,32 +25,29 @@ public class StarSpawner : MonoBehaviour
             StartCoroutine(Reappear(star));
         }
     }
+ Vector2 GetRandomPositionInArea()
+{
+    Vector2 randomPoint = Vector2.zero;
+    int maxAttempts = 10; // 무한 루프 방지용 최대 시도 횟수 / Maximum attempts to avoid infinite loop
+    int attempts = 0;
 
-    Vector2 GetRandomPositionInArea()
+    while (attempts < maxAttempts)
     {
-        Vector2 randomPoint = Vector2.zero;
-        int maxAttempts = 10; // 무한 루프 방지를 위한 최대 시도 횟수 / Maximum attempts to avoid infinite loop
-        int attempts = 0;
+        Bounds bounds = respawnArea.bounds;
+        float randomX = Random.Range(bounds.min.x, bounds.max.x);
+        float randomY = Random.Range(bounds.min.y, bounds.max.y);
+        randomPoint = new Vector2(randomX, randomY);
 
-        // Edge Collider 2D 내의 점을 이용하여 랜덤 위치 생성 / Generate random position within Edge Collider 2D
-        while (attempts < maxAttempts)
+        // Polygon Collider 2D 내부인지 확인 / Check if point is inside Polygon Collider 2D
+        if (respawnArea.OverlapPoint(randomPoint))
         {
-            Bounds bounds = respawnArea.bounds;
-            float randomX = Random.Range(bounds.min.x, bounds.max.x);
-            float randomY = Random.Range(bounds.min.y, bounds.max.y);
-            randomPoint = new Vector2(randomX, randomY);
-
-            // 점이 Edge Collider 2D 내부에 있는지 확인 / Check if point is inside Edge Collider 2D
-            if (respawnArea.OverlapPoint(randomPoint))
-            {
-                break;
-            }
-            attempts++;
+            break;
         }
-
-        return randomPoint;
+        attempts++;
     }
 
+    return randomPoint;
+}
     System.Collections.IEnumerator Reappear(GameObject star)
     {
         // 랜덤 시간 대기 후 다시 나타나게 함 / Wait for a random time before respawning the star
