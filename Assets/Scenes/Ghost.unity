@@ -2487,10 +2487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775e614c8f2db4a25a656ed407a1629a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
-  retryButton: {fileID: 0}
-  timerText: {fileID: 0}
-  player: {fileID: 0}
+  startButton: {fileID: 1493227593}
+  retryButton: {fileID: 1006165145}
+  timerText: {fileID: 722670384}
+  player: {fileID: 1185363603}
   timeSeconds: 180
 --- !u!1 &1185363603
 GameObject:
