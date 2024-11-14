@@ -4,50 +4,55 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed;
-    public float jumpForce;
+    public float moveSpeed; // 이동 속도 / Player movement speed
+    public float jumpForce; // 점프 힘 / Jump force
 
-    public KeyCode left;
-    public KeyCode right;
-    public KeyCode jump;
+    public KeyCode left; // 왼쪽 이동 키 / Key for moving left
+    public KeyCode right; // 오른쪽 이동 키 / Key for moving right
+    public KeyCode jump; // 점프 키 / Key for jumping
 
     private Rigidbody2D theRB;
+
+    public StarSpawner starSpawner; // StarSpawner 스크립트 참조 / Reference to StarSpawner script
 
     // Start is called before the first frame update
     void Start()
     {
+        // Rigidbody2D 컴포넌트 가져오기 / Get Rigidbody2D component
         theRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
-    { 
-
+    {
+        // 플레이어의 이동 처리 / Handle player movement
         if (Input.GetKey(left))
         {
-            theRB.velocity = new Vector2(-moveSpeed, theRB.velocity.y);
+            theRB.velocity = new Vector2(-moveSpeed, theRB.velocity.y); // 왼쪽 이동 / Move left
         }
         else if (Input.GetKey(right))
         {
-            theRB.velocity = new Vector2(moveSpeed, theRB.velocity.y);
+            theRB.velocity = new Vector2(moveSpeed, theRB.velocity.y); // 오른쪽 이동 / Move right
         }
         else
         {
-            theRB.velocity = new Vector2(0, theRB.velocity.y);
+            theRB.velocity = new Vector2(0, theRB.velocity.y); // 이동이 없으면 속도 0 / Stop when no input
         }
 
-        if (Input.GetKeyDown(jump))
+        // 점프 처리 / Handle jump
+        if (Input.GetKeyDown(jump) && Mathf.Abs(theRB.velocity.y) < 0.01f)
         {
-            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce); // 점프 / Jump
         }
+    }
 
-        if (theRB.velocity.x < 0)
+    // 플레이어가 다른 오브젝트와 충돌했을 때 호출 / Called when player collides with another object
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Star"))
         {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (theRB.velocity.x > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
+            other.gameObject.SetActive(false); // 별을 비활성화 / Deactivate the star
+            starSpawner.OnStarCollected(); // 별 수집 처리 / Handle collected star
         }
     }
 }
