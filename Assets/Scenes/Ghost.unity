@@ -2731,10 +2731,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775e614c8f2db4a25a656ed407a1629a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
-  retryButton: {fileID: 0}
-  timerText: {fileID: 0}
-  player: {fileID: 0}
+  startButton: {fileID: 1493227593}
+  retryButton: {fileID: 1006165145}
+  timerText: {fileID: 722670384}
+  player: {fileID: 1185363603}
   timeSeconds: 180
 --- !u!1001 &1149062055
 PrefabInstance:
@@ -4542,7 +4542,7 @@ MonoBehaviour:
   - {fileID: 4507791033351163700}
   - {fileID: 3730390079088309023}
   - {fileID: 2480235290202927356}
-  respawnArea: {fileID: 0}
+  respawnArea: {fileID: 2116229646}
   minReappearTime: 1
   maxReappearTime: 3
   starsToCollect: 20
